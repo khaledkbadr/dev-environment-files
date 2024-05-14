@@ -11,6 +11,8 @@ return {
 
     -- configure treesitter
     treesitter.setup({ -- enable syntax highlighting
+      auto_install = true,
+
       highlight = {
         enable = true,
       },
@@ -23,6 +25,9 @@ return {
       -- ensure these language parsers are installed
       ensure_installed = {
         "json",
+        "go",
+        "ruby",
+        "python",
         "javascript",
         "typescript",
         "tsx",
@@ -43,11 +48,18 @@ return {
         "vimdoc",
         "c",
       },
+
+      -- Install parsers synchronously (only applied to `ensure_installed`)
+      sync_install = false,
+
+      -- List of parsers to ignore installing (or "all")
+      ignore_install = {},
+
       incremental_selection = {
         enable = true,
         keymaps = {
-          init_selection = "<C-space>",
-          node_incremental = "<C-space>",
+          init_selection = "gnn",
+          node_incremental = "grn",
           scope_incremental = false,
           node_decremental = "<bs>",
         },
