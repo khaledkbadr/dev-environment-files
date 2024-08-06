@@ -39,7 +39,6 @@ return {
         "pyright",
         "gopls",
         "solargraph",
-        "rubocop",
       },
     })
 
@@ -51,6 +50,11 @@ return {
         "black", -- python formatter
         "pylint",
         "eslint_d",
+        "gofumpt",
+        "golines",
+        "goimports",
+        "golangci-lint",
+        "rubocop",
       },
     })
   end,
